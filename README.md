@@ -12,7 +12,7 @@ A minimal Progressive Web App built on top of Angular Ionic and Firebase to illu
 
 ``npm install``
 
-## Launch
+## Launch in browser emulator lab
 
 ``ionic serve -l``
 
