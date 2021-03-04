@@ -1,6 +1,6 @@
 # Tasky
 
-A minimal Progressive Web App built on top of Angular Ionic and Firebase to illustrate it's features.
+A minimal Android App built on top of Angular Ionic and Firebase to illustrate it's features.
 
 ## Requirements
 * NodeJS (v12.16.2)
@@ -18,7 +18,7 @@ A minimal Progressive Web App built on top of Angular Ionic and Firebase to illu
 
 ## Build
 
-Install Java JDK 8, Gradle and the Android (or iOS) SDK, accept it's licences. The best way would be to install Android Studio to manage this.
+Install Java JDK 8, Gradle and the Android SDK, accept it's licences. The best way would be to install Android Studio to manage this.
 
 For Android you will also need the Android Debug Bridge Unility.
 
