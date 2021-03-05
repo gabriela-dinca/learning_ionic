@@ -5,17 +5,24 @@
 </ion-header>
 
 <ion-content class="ion-padding w-100">
+  <img class='imageTop' src="assets/images/login_top.png" />
   <form [formGroup]="loginForm" (submit)="loginUser()" novalidate>
     <ion-item>
+      <div class="item-note item-start">
+        <ion-icon name="at" color='secondary'></ion-icon>
+      </div>
       <ion-input formControlName="email" type="email" placeholder="Email"></ion-input>
     </ion-item>
-    <ion-item class="error-message" *ngIf="!loginForm.controls.email.valid  && loginForm.controls.email.dirty">
+    <ion-item class="error-message no-lines" *ngIf="!loginForm.controls.email.valid  && loginForm.controls.email.dirty">
       <p>Please enter a valid email.</p>
     </ion-item>
     <ion-item>
+      <div class="item-note item-start">
+        <ion-icon name="lock" color="secondary"></ion-icon>
+      </div>
       <ion-input formControlName="password" type="password" placeholder="Password"></ion-input>
     </ion-item>
-    <ion-item class="error-message" *ngIf="!loginForm.controls.password.valid  && loginForm.controls.password.dirty">
+    <ion-item class="error-message no-lines" *ngIf="!loginForm.controls.password.valid  && loginForm.controls.password.dirty">
       <p>Please enter a valid password name.</p>
     </ion-item>
     <ion-grid>
