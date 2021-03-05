@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Register</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form [formGroup]="signupForm" (submit)="signupUser()" novalidate>
+    <ion-item>
+      <ion-input formControlName="firstName" type="text" placeholder="First Name"></ion-input>
+    </ion-item>
+    <ion-item class="error-message" *ngIf="!signupForm.controls.firstName.valid  && signupForm.controls.firstName.dirty">
+      <p>Please enter a valid first name.</p>
+    </ion-item>
+    <ion-item>
+      <ion-input formControlName="lastName" type="text" placeholder="Last Name"></ion-input>
+    </ion-item>
+    <ion-item class="error-message" *ngIf="!signupForm.controls.lastName.valid  && signupForm.controls.lastName.dirty">
+      <p>Please enter a valid last name.</p>
+    </ion-item>
+    <ion-item>
+      <ion-input formControlName="email" type="email" placeholder="Email"></ion-input>
+    </ion-item>
+    <ion-item class="error-message" *ngIf="!signupForm.controls.email.valid  && signupForm.controls.email.dirty">
+      <p>Please enter a valid email.</p>
+    </ion-item>
+    <ion-item>
+      <ion-input formControlName="password" type="password" placeholder="Password"></ion-input>
+    </ion-item>
+    <ion-item class="error-message" *ngIf="!signupForm.controls.password.valid  && signupForm.controls.password.dirty">
+      <p>Please enter a valid password name.</p>
+    </ion-item>
+    <ion-item>
+      <ion-input formControlName="passwordRepeat" type="password" placeholder="Confirm Password"></ion-input>
+    </ion-item>
+    <ion-grid>
+      <ion-row>
+        <ion-col style="text-align: center">
+          <button class="ion-button center-all" type="submit" [disabled]="!signupForm.valid">Create an Account</button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </form>
+</ion-content>
