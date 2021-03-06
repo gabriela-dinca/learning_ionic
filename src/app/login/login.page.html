@@ -5,11 +5,11 @@
 </ion-header>
 
 <ion-content class="ion-padding w-100">
-  <img class='imageTop' src="assets/images/login_top.png" />
+  <img class='imageTop' src="assets/images/login_top.png"  alt="logo"/>
   <form [formGroup]="loginForm" (submit)="loginUser()" novalidate>
     <ion-item>
       <div class="item-note item-start">
-        <ion-icon name="at" color='secondary'></ion-icon>
+        <ion-icon name="at" color="secondary"></ion-icon>
       </div>
       <ion-input formControlName="email" type="email" placeholder="Email"></ion-input>
     </ion-item>
@@ -18,7 +18,7 @@
     </ion-item>
     <ion-item>
       <div class="item-note item-start">
-        <ion-icon name="lock" color="secondary"></ion-icon>
+        <ion-icon name="eye-off" color="secondary"></ion-icon>
       </div>
       <ion-input formControlName="password" type="password" placeholder="Password"></ion-input>
     </ion-item>

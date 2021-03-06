@@ -2,16 +2,15 @@ import { Component, ViewChild, OnInit } from '@angular/core';
 import { NavController, AlertController } from '@ionic/angular';
 import {AngularFireAuth} from 'angularfire2/auth';
 import { AngularFirestore } from 'angularfire2/firestore';
-import {map} from 'rxjs/operators';
-
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
+
 export class HomePage {
-  taskList = [];
+
   taskName = '';
   userId: any;
   fireStoreTaskList: any;
@@ -28,13 +27,12 @@ export class HomePage {
   // tslint:disable-next-line:use-lifecycle-interface
   ngOnInit(){
     setTimeout(() => {
-      this.taskInput.setFocus();
+      this.taskInput.focus();
     }, 350);
     this.afAuth.authState.subscribe(user => {
       if (user){
         this.userId = user.uid;
         this.fireStoreTaskList = this.firestore.doc<any>('users/' + this.userId).collection('tasks').valueChanges();
-        console.log(this.firestore.doc<any>('users/' + this.userId));
         this.fireStoreList = this.firestore.doc<any>('users/' + this.userId).collection('tasks');
       }
     });
@@ -45,17 +43,15 @@ export class HomePage {
       const task = this.taskName;
       const id = this.firestore.createId();
       this.fireStoreList.doc(id).set({
-        id, // id: id shorthand
+        id,
         taskName: task
       });
-      // this.taskList.push(this.taskName);
       this.taskName = '';
     }
-    this.taskInput.setFocus();
+    this.taskInput.focus();
   }
 
   deleteTask(id: any) {
-    // this.taskList.splice(i, 1);
     this.fireStoreList.doc(id).delete();
   }
 
@@ -70,7 +66,6 @@ export class HomePage {
             this.fireStoreList.doc(id).update({
               taskName: data.editTask
             });
-            // this.taskList[id] = data.editTask;
           }
         },
       ]

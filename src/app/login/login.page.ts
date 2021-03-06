@@ -29,7 +29,7 @@ export class LoginPage implements OnInit {
   }
 
   loginUser() {
-    this.afAuth.auth.signInWithEmailAndPassword(this.loginForm.value.email, this.loginForm.value.password).then(() =>{
+    this.afAuth.auth.signInWithEmailAndPassword(this.loginForm.value.email, this.loginForm.value.password).then(() => {
       this.navCtrl.navigateRoot('/home');
     }, (error) => {
       this.presentAlertLoginError(error);

@@ -12,8 +12,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
-import firebase from 'firebase';
-import initializeApp = firebase.initializeApp;
+
 import {LoginPage} from './login/login.page';
 import {RegisterPage} from './register/register.page';
 import {PasswordResetPage} from './password-reset/password-reset.page';
@@ -33,9 +32,9 @@ export const firebaseConfig = {
 @NgModule({
   declarations: [
     AppComponent,
-    // LoginPage,
-    // RegisterPage,
-    // PasswordResetPage
+    LoginPage,
+    RegisterPage,
+    PasswordResetPage
   ],
   entryComponents: [
     LoginPage,
