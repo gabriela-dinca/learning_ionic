@@ -22,7 +22,7 @@ Install Java JDK 8, Gradle and the Android SDK, accept it's licences. The best w
 
 For Android you will also need the Android Debug Bridge Unility.
 
-``ionic cordova compile android --prod --release`` to compile the .apk.
+``ionic cordova compile android --prod`` to compile the .apk.
 
 ## Install .apk on a device
 
