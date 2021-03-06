@@ -16,6 +16,6 @@ import { PasswordResetPage } from './password-reset.page';
         PasswordResetPageRoutingModule,
         ReactiveFormsModule
     ],
-  declarations: [PasswordResetPage]
+  // declarations: [PasswordResetPage]
 })
 export class PasswordResetPageModule {}
