@@ -22,8 +22,12 @@
           <ion-item class="ion-justify-content-around" *ngIf="todoItem.taskName !== ''">
               {{ todoItem.taskName }}
               <div class="item-note" slot="end">
-               <ion-button (click)="updateTask(todoItem.id)" color="secondary"><ion-icon name="create"></ion-icon></ion-button>
-               <ion-button (click)="deleteTask(todoItem.id)" color="danger"><ion-icon name="trash"></ion-icon></ion-button>
+               <ion-button (click)="updateTask(todoItem.id)" color="secondary">
+                   <ion-icon name="create"></ion-icon>
+               </ion-button>
+               <ion-button (click)="deleteTask(todoItem.id)" color="danger">
+                   <ion-icon name="trash"></ion-icon>
+               </ion-button>
               </div>
           </ion-item>
         </ng-container>
