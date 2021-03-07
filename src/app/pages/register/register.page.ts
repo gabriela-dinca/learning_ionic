@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {NavController, AlertController, LoadingController} from '@ionic/angular';
-import {EmailValidator} from '../../validators/email';
+import {EmailValidator} from '../../../validators/email';
 import { AngularFirestore } from 'angularfire2/firestore';
 import { AngularFireAuth } from 'angularfire2/auth';
 

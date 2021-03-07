@@ -3,8 +3,8 @@ import { Component } from '@angular/core';
 import {NavController, Platform} from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
-import { HomePage } from './home/home.page';
-import { RegisterPage } from './register/register.page';
+import { HomePage } from './pages/home/home.page';
+import { RegisterPage } from './pages/register/register.page';
 import { AngularFireAuth } from 'angularfire2/auth';
 
 @Component({

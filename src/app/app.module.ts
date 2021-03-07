@@ -13,9 +13,9 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 
-import {LoginPage} from './login/login.page';
-import {RegisterPage} from './register/register.page';
-import {PasswordResetPage} from './password-reset/password-reset.page';
+import {LoginPage} from './pages/login/login.page';
+import {RegisterPage} from './pages/register/register.page';
+import {PasswordResetPage} from './pages/password-reset/password-reset.page';
 import {ReactiveFormsModule} from '@angular/forms';
 
 
