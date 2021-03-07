@@ -22,9 +22,11 @@ Install Java JDK 8, Gradle and the Android SDK, accept it's licences. The best w
 
 For Android you will also need the Android Debug Bridge Unility.
 
+``ionic cordova platform add android``
+
 ``ionic cordova resources android``
 
-``ionic cordova compile android --prod`` to compile the .apk.
+``ionic cordova compile android`` to compile the .apk.
 
 ## Install .apk on a device
 
@@ -33,6 +35,13 @@ For Android you will also need the Android Debug Bridge Unility.
 3. connect your Device with an USB cable
 4. ``adb devices``
 5. ``adb install <path-to-project>\platforms\android\app\build\outputs\apk\debug\app-debug.apk``
+
+In case the App does not work re-install the webview plugin.
+
+``ionic cordova plugin rm cordova-plugin-ionic-webview``
+``ionic cordova plugin add cordova-plugin-ionic-webview``
+``rm -rf plugins``
+``ionic cordova build android``
 
 ## Remote Debugging the Android Device App
 
