@@ -12,7 +12,7 @@ import { AngularFirestore } from 'angularfire2/firestore';
 export class HomePage {
 
   taskName = '';
-  userId: any;
+  userId: string;
   fireStoreTaskList: any;
   fireStoreList: any;
   @ViewChild('taskInput') taskInput;
@@ -51,7 +51,7 @@ export class HomePage {
     this.taskInput.focus();
   }
 
-  deleteTask(id: any) {
+  deleteTask(id: string) {
     this.fireStoreList.doc(id).delete();
   }
 

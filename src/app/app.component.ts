@@ -23,7 +23,6 @@ export class AppComponent {
     private navCtrl: NavController
   ) {
     const authObserver = afAuth.authState.subscribe( user => {
-      console.log(user);
       if (user){
         this.navCtrl.navigateRoot('/home');
         authObserver.unsubscribe();
