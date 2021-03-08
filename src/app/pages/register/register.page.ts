@@ -70,15 +70,7 @@ export class RegisterPage implements OnInit {
                     this.navCtrl.navigateRoot('/home');
                 }, (error) => {
                     this.presentAlert(error);
-                    // this.loading.dismiss().then(() => {
-                    //     this.presentAlert(error);
-                    // });
                 });
-
-            /*this.loading = this.loadingCtrl.create({
-                message: 'Signing up..'
-            });
-            */// this.loading.present();
         } else {
             this.presentAlertPassword();
         }
