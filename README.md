@@ -33,8 +33,9 @@ For Android you will also need the Android Debug Bridge Unility.
 1. Turn on the Develpment Mode on the device and enable USB transfer
 2. ``cd ANDROID_SDK_ROOT`` 
 3. connect your Device with an USB cable
-4. ``adb devices``
-5. ``adb install <path-to-project>\platforms\android\app\build\outputs\apk\debug\app-debug.apk``
+4. ``adb start-server``
+5. ``adb devices``
+6. ``adb install <path-to-project>\platforms\android\app\build\outputs\apk\debug\app-debug.apk``
 
 In case the App does not work re-install the webview plugin.
 
